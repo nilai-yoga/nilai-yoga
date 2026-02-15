@@ -4,9 +4,8 @@ body {
   color: #333;
 }
 
-/* HERO */
 .hero {
-  background: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773') center/cover no-repeat;
   height: 60vh;
   display: flex;
   align-items: center;
@@ -15,7 +14,7 @@ body {
 }
 
 .overlay {
-  background-color: rgba(255,255,255,0.75);
+  background-color: rgba(255,255,255,0.7);
   padding: 40px;
   border-radius: 15px;
 }
@@ -25,15 +24,13 @@ body {
   margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 18px;
-}
-
-/* NAV */
 nav {
   text-align: center;
   padding: 15px;
   background: #f5f2ec;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav a {
@@ -43,11 +40,6 @@ nav a {
   font-weight: 600;
 }
 
-nav a:hover {
-  color: #3b6248;
-}
-
-/* SECTIONS */
 .section-light {
   background-color: #f7f5f0;
   padding: 60px 20px;
@@ -65,12 +57,12 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* CARDS */
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  padding-top: 10px;
 }
 
 .card {
@@ -78,15 +70,25 @@ h2 {
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  width: 250px;
-  transition: 0.3s;
+  width: 240px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+footer {
+  text-align: center;
+  padding: 22px 16px;
+  background: #eae6df;
 }
 
-/* KONTAKT */
+.footer-links a {
+  color: #5f7d5f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 .kontakt-section {
   background-color: #f4f8f3;
   padding: 60px 20px;
@@ -99,8 +101,8 @@ h2 {
 }
 
 .kontakt-section form {
-  max-width: 500px;
-  margin: auto;
+  max-width: 520px;
+  margin: 18px auto 0;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -119,20 +121,40 @@ h2 {
   color: white;
   padding: 12px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
 .kontakt-section button:hover {
   background-color: #3b6248;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #eae6df;
+.kontakt-section button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
+.form-status {
+  margin: 6px 0 0;
+  font-size: 15px;
+}
+
+.form-status.success {
+  color: #2f6b3b;
+  font-weight: 600;
+}
+
+.form-status.error {
+  color: #b00020;
+  font-weight: 600;
+}
+
+/* موبایل */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 28px; }
+  .overlay { padding: 22px; }
+  nav a { display: inline-block; margin: 8px 10px; }
+  .card { width: 90%; max-width: 360px; }
+}
