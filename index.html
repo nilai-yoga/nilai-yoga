@@ -18,7 +18,7 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Zur Startseite">
+      <a class="brand" href="index.html#top" aria-label="Zur Startseite">
         <span class="brand-mark">N</span>
         <span class="brand-text">
           <strong>Nilai Yoga</strong>
@@ -240,14 +240,12 @@
 
           <p class="tiny muted">
             Mit Absenden des Formulars erklärst du dich mit der Verarbeitung deiner Daten gemäß
-            <a href="#datenschutz">Datenschutzerklärung</a> einverstanden.
+            <a href="datenschutz.html">Datenschutzerklärung</a> einverstanden.
           </p>
         </div>
 
         <div class="card">
           <h3>Nachricht senden</h3>
-
-          <!-- Formspree endpoint set to your form id -->
           <form class="form" action="https://formspree.io/f/mreaqyqj" method="POST">
             <div class="form-row">
               <label for="name">Name</label>
@@ -289,99 +287,14 @@
         </div>
       </div>
     </section>
-
-    <!-- IMPRESSUM -->
-    <section class="section" id="impressum">
-      <div class="container legal">
-        <h2>Impressum</h2>
-
-        <p><strong>Angaben gemäß § 5 TMG</strong></p>
-
-        <p>
-          <strong>Fariba Abdollahi</strong><br>
-          Nilai Yoga<br>
-          Pestalozzistraße 3<br>
-          48268 Greven<br>
-          Deutschland
-        </p>
-
-        <p>
-          <strong>Kontakt</strong><br>
-          E-Mail: <a href="mailto:info@nilai-yoga.de">info@nilai-yoga.de</a>
-        </p>
-
-        <p class="muted">
-          Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).
-        </p>
-
-        <h3>Haftung für Inhalte</h3>
-        <p class="muted">
-          Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich.
-          Nach §§ 8 bis 10 TMG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.
-        </p>
-
-        <h3>Haftung für Links</h3>
-        <p class="muted">
-          Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
-          Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.
-        </p>
-      </div>
-    </section>
-
-    <!-- DATENSCHUTZ -->
-    <section class="section section-alt" id="datenschutz">
-      <div class="container legal">
-        <h2>Datenschutzerklärung</h2>
-
-        <h3>1. Verantwortliche</h3>
-        <p>
-          <strong>Fariba Abdollahi</strong><br>
-          Nilai Yoga<br>
-          Pestalozzistraße 3, 48268 Greven, Deutschland<br>
-          E-Mail: <a href="mailto:info@nilai-yoga.de">info@nilai-yoga.de</a>
-        </p>
-
-        <h3>2. Hosting (GitHub Pages)</h3>
-        <p class="muted">
-          Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf können technisch notwendige Daten
-          (z. B. IP-Adresse, Zeitstempel, angeforderte Ressource) verarbeitet werden.
-        </p>
-
-        <h3>3. Kontaktformular (Formspree)</h3>
-        <p class="muted">
-          Wenn Sie uns über das Kontaktformular schreiben, werden die eingegebenen Daten (Name, E-Mail, Nachricht)
-          zum Zweck der Bearbeitung Ihrer Anfrage verarbeitet. Die Übermittlung erfolgt über Formspree.
-        </p>
-        <p class="muted">
-          Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung/Erfüllung) bzw. Art. 6 Abs. 1 lit. f DSGVO
-          (berechtigtes Interesse an effizienter Kommunikation).
-        </p>
-
-        <h3>4. Speicherdauer</h3>
-        <p class="muted">
-          Daten aus Anfragen speichern wir nur so lange, wie es für die Bearbeitung erforderlich ist
-          und gesetzliche Aufbewahrungsfristen bestehen.
-        </p>
-
-        <h3>5. Ihre Rechte</h3>
-        <ul class="list">
-          <li>Auskunft (Art. 15 DSGVO)</li>
-          <li>Berichtigung (Art. 16 DSGVO)</li>
-          <li>Löschung (Art. 17 DSGVO)</li>
-          <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-          <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
-          <li>Widerspruch (Art. 21 DSGVO)</li>
-        </ul>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p class="muted">© <span id="year"></span> Nilai Yoga · Greven</p>
       <div class="footer-links">
-        <a href="#impressum">Impressum</a>
-        <a href="#datenschutz">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
       </div>
     </div>
   </footer>
@@ -396,7 +309,6 @@
       menu.classList.toggle('open');
     });
 
-    // close on click
     menu?.addEventListener('click', (e) => {
       if (e.target.tagName === 'A') {
         toggle.setAttribute('aria-expanded', 'false');
