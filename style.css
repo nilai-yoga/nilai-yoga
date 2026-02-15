@@ -75,3 +75,45 @@ footer {
     background: #eae6df;
 }
 
+.kontakt-section {
+  background-color: #f4f8f3;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.kontakt-section h2 {
+  color: #4a7c59;
+  margin-bottom: 10px;
+}
+
+.kontakt-section form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.kontakt-section input,
+.kontakt-section textarea {
+  padding: 12px;
+  border: 1px solid #cdd5c6;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.kontakt-section button {
+  background-color: #4a7c59;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.kontakt-section button:hover {
+  background-color: #3b6248;
+}
+
