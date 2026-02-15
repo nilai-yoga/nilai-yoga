@@ -171,8 +171,17 @@ a:hover{ text-decoration:underline; }
 .muted{ color: var(--muted); }
 .tiny{ font-size: 0.9rem; color: var(--muted2); }
 
-/* Hero */
-.hero{ padding: 84px 0 50px; }
+/* HERO (Background image + soft color overlay) */
+.hero{
+  padding: 84px 0 60px;
+  position: relative;
+  background:
+    linear-gradient(rgba(30,45,40,0.62), rgba(10,15,18,0.88)),
+    url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
 .hero-inner{
   display:grid;
   grid-template-columns: 1.25fr 0.95fr;
@@ -309,14 +318,25 @@ input:focus, textarea:focus, select:focus{
 textarea{ resize: vertical; }
 .hp{ display:none; }
 
-/* Legal pages look (keeps same style, no layout break) */
-.legal{
-  max-width: 900px;
+/* Form success & error */
+.form-success{
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(76,175,80,0.15);
+  border: 1px solid rgba(76,175,80,0.45);
+  color: rgba(185,246,202,0.95);
+  font-weight: 700;
 }
-.legal h1{ margin-top: 0; }
-.legal h3{ margin-top: 26px; }
-.legal p{ color: var(--muted); }
-.legal strong{ color: var(--text); }
+.form-error{
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(244,67,54,0.12);
+  border: 1px solid rgba(244,67,54,0.35);
+  color: rgba(255,205,210,0.95);
+  font-weight: 700;
+}
 
 /* Footer */
 .site-footer{
