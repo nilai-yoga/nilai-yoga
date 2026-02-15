@@ -1,62 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Impressum | Nilai Yoga</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Impressum von Nilai Yoga in Greven." />
+  <title>Impressum | Nilai Yoga</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#top" aria-label="Zur Startseite">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">
+          <strong>Nilai Yoga</strong>
+          <small>Greven · Münsterland</small>
+        </span>
+      </a>
 
-<section class="legal-page">
-    <h1>Impressum</h1>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a class="btn btn-small" href="index.html#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
-    <h2>Angaben gemäß § 5 TMG</h2>
-    <p>
-        Fariba Abdollahi<br>
+  <main class="section">
+    <div class="container legal">
+      <h1>Impressum</h1>
+
+      <p><strong>Angaben gemäß § 5 TMG</strong></p>
+
+      <p>
+        <strong>Fariba Abdollahi</strong><br>
         Nilai Yoga<br>
         Pestalozzistraße 3<br>
         48268 Greven<br>
         Deutschland
-    </p>
+      </p>
 
-    <h2>Kontakt</h2>
-    <p>
+      <p>
+        <strong>Kontakt</strong><br>
         E-Mail: <a href="mailto:info@nilai-yoga.de">info@nilai-yoga.de</a>
-    </p>
+      </p>
 
-    <h2>Umsatzsteuer</h2>
-    <p>
-        Kleinunternehmerin gemäß § 19 UStG.<br>
-        Es wird keine Umsatzsteuer berechnet.
-    </p>
+      <p class="muted">
+        Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).
+      </p>
 
-    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-    <p>
-        Fariba Abdollahi<br>
-        Anschrift wie oben
-    </p>
+      <h3>Haftung für Inhalte</h3>
+      <p class="muted">
+        Als Diensteanbieterin bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich.
+        Nach §§ 8 bis 10 TMG bin ich jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.
+      </p>
 
-    <h2>Haftung für Inhalte</h2>
-    <p>
-        Als Diensteanbieterin bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
-        Nach §§ 8 bis 10 TMG bin ich als Diensteanbieterin jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.
-    </p>
+      <h3>Haftung für Links</h3>
+      <p class="muted">
+        Diese Website enthält ggf. Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe.
+        Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.
+      </p>
+    </div>
+  </main>
 
-    <h2>Haftung für Links</h2>
-    <p>
-        Diese Website enthält ggf. Links zu externen Websites Dritter.
-        Auf deren Inhalte habe ich keinen Einfluss.
-        Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.
-    </p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> Nilai Yoga · Greven</p>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
 
-    <h2>Urheberrecht</h2>
-    <p>
-        Die durch die Seitenbetreiberin erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.
-        Die Vervielfältigung, Bearbeitung oder Verbreitung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung.
-    </p>
-
-</section>
-
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
