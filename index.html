@@ -1,50 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Nilai Yoga – Greven</title>
-
-  <!-- Google Font -->
+  <meta name="description" content="Yoga, Achtsamkeit & Bewegung für Kinder und Erwachsene in Greven (Münsterland). Kinder-Yoga, Familien-Yoga, Yoga für Erwachsene." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
+  <header class="hero" id="start">
     <div class="overlay">
       <h1>Nilai Yoga – Greven</h1>
       <p>Yoga, Achtsamkeit & Bewegung für Kinder und Erwachsene</p>
     </div>
-  </section>
+  </header>
 
-  <!-- NAVIGATION -->
   <nav>
+    <a href="#start">Startseite</a>
     <a href="#ueber">Über mich</a>
     <a href="#angebote">Angebote</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
 
-  <!-- ÜBER MICH -->
-  <section id="ueber" class="section-light">
-    <h2>Über mich</h2>
+  <section class="section-light" id="ueber">
+    <h2>Willkommen</h2>
     <p>
-      Mein Name ist Fariba Abdollahi.  
-      Ich bin selbstständige Yoga-, Meditations- und Achtsamkeitstrainerin für Kinder und Erwachsene in Greven.
+      Ich biete Yoga-, Meditations- und Achtsamkeitsangebote für Kinder, Familien und Erwachsene in Greven an.
+      Mein Fokus liegt auf Ruhe, Bewegung, Selbstwahrnehmung und einem wertschätzenden Umgang mit sich selbst.
     </p>
+
+    <h2 style="margin-top:40px;">Über mich</h2>
     <p>
-      Mir ist es wichtig, einen geschützten Raum zu schaffen, in dem Menschen – besonders Kinder –  
-      sich gesehen, angenommen und gestärkt fühlen.
+      Mein Name ist <strong>Fariba Abdollahi</strong>.<br>
+      Ich arbeite als selbstständige Yoga-, Meditations- und Achtsamkeitstrainerin für Kinder und Erwachsene.<br>
+      Mir ist es wichtig, einen geschützten Raum zu schaffen, in dem sich Menschen – besonders Kinder –
+      sicher, gesehen und angenommen fühlen.
     </p>
   </section>
 
-  <!-- ANGEBOTE -->
-  <section id="angebote" class="section-white">
+  <section class="section-white" id="angebote">
     <h2>Angebote</h2>
 
     <div class="card-container">
@@ -59,36 +58,76 @@
       </div>
 
       <div class="card">
-        <h3>Erwachsenen Yoga</h3>
-        <p>Sanfte Praxis für mehr Ruhe, Balance und innere Stärke im Alltag.</p>
+        <h3>Erwachsene</h3>
+        <p>Sanfte Praxis für Balance, innere Ruhe und einen achtsamen Alltag.</p>
       </div>
     </div>
   </section>
 
-  <!-- KONTAKT -->
-  <section id="kontakt" class="kontakt-section">
+  <!-- ✅ KONTAKT mit Erfolgsmeldung (AJAX) -->
+  <section class="kontakt-section" id="kontakt">
     <h2>Kontakt</h2>
     <p>Ich freue mich über deine Nachricht 🌿</p>
 
-    <!-- HIER deinen Formspree Link einfügen -->
-    <form action="https://formspree.io/f/mreaqyqj" method="POST">
-
-      <input type="text" name="name" placeholder="Dein Name" required>
-
-      <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
-
-      <textarea name="message" rows="5" placeholder="Deine Nachricht" required></textarea>
-
-      <button type="submit">Nachricht senden</button>
+    <!-- IMPORTANT: Formspree Endpoint -->
+    <form id="kontaktForm" action="https://formspree.io/f/mreaqyqj" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="E-Mail" required>
+      <textarea name="message" placeholder="Nachricht" rows="5" required></textarea>
+      <button type="submit" id="sendBtn">Nachricht senden</button>
+      <p id="formStatus" class="form-status" aria-live="polite"></p>
     </form>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Nilai Yoga – Greven</p>
+    <p>© <span id="year"></span> Nilai Yoga – Greven</p>
+    <p class="footer-links">
+      <a href="impressum.html">Impressum</a> ·
+      <a href="datenschutz.html">Datenschutz</a>
+    </p>
   </footer>
+
+  <script>
+    // Jahr automatisch
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ✅ A) AJAX Submit برای پیام موفقیت
+    const form = document.getElementById("kontaktForm");
+    const statusEl = document.getElementById("formStatus");
+    const btn = document.getElementById("sendBtn");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      statusEl.textContent = "Sende…";
+      statusEl.className = "form-status";
+      btn.disabled = true;
+
+      try {
+        const formData = new FormData(form);
+
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { "Accept": "application/json" }
+        });
+
+        if (res.ok) {
+          form.reset();
+          statusEl.textContent = "Vielen Dank! Deine Nachricht wurde erfolgreich gesendet. 🌿";
+          statusEl.className = "form-status success";
+        } else {
+          statusEl.textContent = "Ups… das hat nicht geklappt. Bitte versuche es später erneut.";
+          statusEl.className = "form-status error";
+        }
+      } catch (err) {
+        statusEl.textContent = "Keine Verbindung. Bitte prüfe dein Internet und versuche es erneut.";
+        statusEl.className = "form-status error";
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
 
 </body>
 </html>
-
-
