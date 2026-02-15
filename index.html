@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Nilai Yoga in Greven (Münsterland): Kinder Yoga, Familien Yoga, Erwachsenen Yoga, Meditation und Achtsamkeit. Kurse für Kitas, Schulen und Erwachsene." />
+  <meta name="description" content="Nilai Yoga in Greven (Münsterland): Kinder Yoga, Familien Yoga, Erwachsenen Yoga, Meditation und Achtsamkeit." />
   <title>Nilai Yoga – Yoga, Meditation & Achtsamkeit in Greven</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" />
 </head>
 
 <body>
@@ -67,7 +66,7 @@
           </ul>
         </div>
 
-        <div class="hero-card" role="complementary" aria-label="Kurzinfos">
+        <aside class="hero-card" aria-label="Kurzinfos">
           <div class="card">
             <h2>Auf einen Blick</h2>
             <dl class="facts">
@@ -85,10 +84,10 @@
               </div>
             </dl>
             <p class="muted">
-              Hinweis: Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).
+              Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).
             </p>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
@@ -161,7 +160,7 @@
             wertschätzenden Atmosphäre – mit viel Herz und ohne Leistungsdruck.
           </p>
           <p class="muted">
-            (Hier kannst du später gern noch ein paar Zeilen zu Ausbildung/Qualifikationen ergänzen.)
+            (Wenn du willst, ergänzen wir später noch Ausbildung/Qualifikationen und ein Foto.)
           </p>
 
           <div class="pill-row" aria-label="Stichworte">
@@ -236,7 +235,7 @@
 
           <div class="contact-box">
             <p><strong>E-Mail:</strong> <a href="mailto:info@nilai-yoga.de">info@nilai-yoga.de</a></p>
-            <p><strong>Ort:</strong> Greven (Münsterland)</p>
+            <p><strong>Adresse:</strong> Pestalozzistraße 3, 48268 Greven</p>
           </div>
 
           <p class="tiny muted">
@@ -248,11 +247,8 @@
         <div class="card">
           <h3>Nachricht senden</h3>
 
-          <!-- IMPORTANT:
-            Replace the action URL with your own Formspree endpoint:
-            https://formspree.io/f/XXXXXXXX
-          -->
-          <form class="form" action="https://formspree.io/f/XXXXXXXX" method="POST">
+          <!-- Formspree endpoint set to your form id -->
+          <form class="form" action="https://formspree.io/f/mreaqyqj" method="POST">
             <div class="form-row">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required />
@@ -279,17 +275,16 @@
               <textarea id="message" name="message" rows="6" required></textarea>
             </div>
 
-            <!-- Honeypot (spam protection) -->
+            <!-- Honeypot -->
             <div class="hp" aria-hidden="true">
               <label for="website">Website</label>
               <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
             </div>
 
             <input type="hidden" name="_subject" value="Neue Anfrage über nilai-yoga.de" />
-            <input type="hidden" name="_replyto" value="%email" />
 
             <button class="btn" type="submit">Absenden</button>
-            <p class="tiny muted">Du erhältst keine automatische Bestätigung. Ich melde mich per E-Mail.</p>
+            <p class="tiny muted">Ich melde mich per E-Mail zurück.</p>
           </form>
         </div>
       </div>
@@ -321,15 +316,14 @@
 
         <h3>Haftung für Inhalte</h3>
         <p class="muted">
-          Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
-          Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen
-          oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+          Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich.
+          Nach §§ 8 bis 10 TMG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.
         </p>
 
         <h3>Haftung für Links</h3>
         <p class="muted">
-          Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte
-          auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+          Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
+          Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.
         </p>
       </div>
     </section>
@@ -347,33 +341,29 @@
           E-Mail: <a href="mailto:info@nilai-yoga.de">info@nilai-yoga.de</a>
         </p>
 
-        <h3>2. Allgemeine Hinweise</h3>
+        <h3>2. Hosting (GitHub Pages)</h3>
         <p class="muted">
-          Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Personenbezogene Daten werden auf dieser Website nur im notwendigen Umfang verarbeitet.
-          Rechtsgrundlagen können insbesondere Art. 6 Abs. 1 lit. b (Vertrag/Anbahnung), lit. f (berechtigtes Interesse) und lit. a (Einwilligung) DSGVO sein.
+          Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf können technisch notwendige Daten
+          (z. B. IP-Adresse, Zeitstempel, angeforderte Ressource) verarbeitet werden.
         </p>
 
-        <h3>3. Hosting (GitHub Pages)</h3>
+        <h3>3. Kontaktformular (Formspree)</h3>
         <p class="muted">
-          Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der Website können technisch notwendige Daten (z. B. IP-Adresse, Zeitstempel, angeforderte Ressource)
-          verarbeitet werden, um die Website auszuliefern und Sicherheit zu gewährleisten.
+          Wenn Sie uns über das Kontaktformular schreiben, werden die eingegebenen Daten (Name, E-Mail, Nachricht)
+          zum Zweck der Bearbeitung Ihrer Anfrage verarbeitet. Die Übermittlung erfolgt über Formspree.
+        </p>
+        <p class="muted">
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung/Erfüllung) bzw. Art. 6 Abs. 1 lit. f DSGVO
+          (berechtigtes Interesse an effizienter Kommunikation).
         </p>
 
-        <h3>4. Kontaktformular (Formspree)</h3>
+        <h3>4. Speicherdauer</h3>
         <p class="muted">
-          Wenn Sie uns über das Kontaktformular schreiben, werden die von Ihnen eingegebenen Daten (z. B. Name, E-Mail, Nachricht) zum Zweck der Bearbeitung Ihrer Anfrage verarbeitet.
-          Die Formularübermittlung erfolgt über den Dienst Formspree. Dabei werden die Formulardaten an Formspree übertragen und von dort per E-Mail an uns weitergeleitet.
-        </p>
-        <p class="muted">
-          Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung/Erfüllung eines Vertrags) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizienter Kommunikation).
+          Daten aus Anfragen speichern wir nur so lange, wie es für die Bearbeitung erforderlich ist
+          und gesetzliche Aufbewahrungsfristen bestehen.
         </p>
 
-        <h3>5. Speicherdauer</h3>
-        <p class="muted">
-          Daten aus Anfragen speichern wir nur so lange, wie es für die Bearbeitung erforderlich ist und gesetzliche Aufbewahrungsfristen bestehen.
-        </p>
-
-        <h3>6. Ihre Rechte</h3>
+        <h3>5. Ihre Rechte</h3>
         <ul class="list">
           <li>Auskunft (Art. 15 DSGVO)</li>
           <li>Berichtigung (Art. 16 DSGVO)</li>
@@ -382,11 +372,6 @@
           <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
           <li>Widerspruch (Art. 21 DSGVO)</li>
         </ul>
-
-        <h3>7. SSL-/TLS-Verschlüsselung</h3>
-        <p class="muted">
-          Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-/TLS-Verschlüsselung.
-        </p>
       </div>
     </section>
   </main>
@@ -402,16 +387,16 @@
   </footer>
 
   <script>
-    // Mobile nav
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.getElementById('nav-menu');
+
     toggle?.addEventListener('click', () => {
       const isOpen = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!isOpen));
       menu.classList.toggle('open');
     });
 
-    // Close menu after click
+    // close on click
     menu?.addEventListener('click', (e) => {
       if (e.target.tagName === 'A') {
         toggle.setAttribute('aria-expanded', 'false');
@@ -419,7 +404,6 @@
       }
     });
 
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
