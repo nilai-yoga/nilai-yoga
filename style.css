@@ -1,80 +1,92 @@
 body {
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-    color: #333;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #333;
 }
 
+/* HERO */
 .hero {
-    background: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773') center/cover no-repeat;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  background: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .overlay {
-    background-color: rgba(255,255,255,0.7);
-    padding: 40px;
-    border-radius: 15px;
+  background-color: rgba(255,255,255,0.75);
+  padding: 40px;
+  border-radius: 15px;
 }
 
 .hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
+.hero p {
+  font-size: 18px;
+}
+
+/* NAV */
 nav {
-    text-align: center;
-    padding: 15px;
-    background: #f5f2ec;
+  text-align: center;
+  padding: 15px;
+  background: #f5f2ec;
 }
 
 nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #5f7d5f;
-    font-weight: 600;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #5f7d5f;
+  font-weight: 600;
 }
 
+nav a:hover {
+  color: #3b6248;
+}
+
+/* SECTIONS */
 .section-light {
-    background-color: #f7f5f0;
-    padding: 60px 20px;
-    text-align: center;
+  background-color: #f7f5f0;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .section-white {
-    background-color: white;
-    padding: 60px 20px;
-    text-align: center;
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 h2 {
-    color: #5f7d5f;
-    margin-bottom: 20px;
+  color: #5f7d5f;
+  margin-bottom: 20px;
 }
 
+/* CARDS */
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    width: 220px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  width: 250px;
+  transition: 0.3s;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #eae6df;
+.card:hover {
+  transform: translateY(-5px);
 }
 
+/* KONTAKT */
 .kontakt-section {
   background-color: #f4f8f3;
   padding: 60px 20px;
@@ -115,5 +127,12 @@ footer {
 
 .kontakt-section button:hover {
   background-color: #3b6248;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #eae6df;
 }
 
