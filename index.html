@@ -7,17 +7,33 @@
   <meta name="description" content="Nilai Yoga in Greven (Münsterland): Kinder Yoga, Familien Yoga sowie Yoga & Achtsamkeit für Erwachsene. Kurse in Kita, Schule & privat." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://nilai-yoga.de/" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Nilai Yoga – Kinder • Familie • Erwachsene | Greven (Münsterland)" />
-  <meta property="og:description" content="Kinder Yoga, Familien Yoga sowie Yoga & Achtsamkeit für Erwachsene in Greven (Münsterland)." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nilai-yoga.de/" />
-
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Structured Data -->
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url('fonts/Inter-Regular.woff2') format('woff2');
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: url('fonts/Inter-Bold.woff2') format('woff2');
+      font-weight: 700;
+    }
+    body {
+      font-family: Inter, sans-serif;
+    }
+    /* image boxes style */
+    .portrait-box { margin-bottom: 1.5rem; }
+    .portrait-img {
+      width: 100%;
+      border-radius: 14px;
+      display: block;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+      object-fit: cover;
+    }
+  </style>
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,20 +53,15 @@
   }
   </script>
 </head>
-
 <body>
-  <!-- Background layer -->
   <div class="bg" aria-hidden="true"></div>
-
-  <!-- Header / Nav -->
   <header class="header">
     <div class="container header__inner">
       <div class="brand">
         <div class="brand__name">Nilai Yoga</div>
         <div class="brand__sub">Greven • Münsterland</div>
       </div>
-
-      <nav class="nav" aria-label="Hauptnavigation">
+      <nav class="nav">
         <a href="#angebote">Angebote</a>
         <a href="#ueber-mich">Über mich</a>
         <a href="#ablauf">Ablauf</a>
@@ -58,23 +69,18 @@
       </nav>
     </div>
   </header>
-
-  <!-- Hero -->
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__copy">
           <h1>Yoga • Achtsamkeit • Entspannung</h1>
-          <p class="lead">
-            Für Kinder, Familien und Erwachsene – in Greven (Münsterland). Sanft, spielerisch und alltagstauglich.
-          </p>
-
+          <p class="lead">Für Kinder, Familien und Erwachsene – sanft, spielerisch und alltagstauglich.</p>
           <div class="hero__cta">
             <a class="btn" href="#kontakt">Jetzt anfragen</a>
             <a class="btn btn--ghost" href="#angebote">Angebote ansehen</a>
           </div>
         </div>
-
         <div class="hero__card">
           <div class="hero__badge">Schwerpunkt</div>
           <ul class="checklist">
@@ -85,108 +91,109 @@
         </div>
       </div>
     </section>
-
     <!-- Angebote -->
     <section id="angebote" class="section">
       <div class="container">
         <h2>Angebote</h2>
-        <p class="section__intro">
-          Wähle das passende Angebot – ich passe Inhalte, Dauer und Format gern an eure Bedürfnisse an.
-        </p>
-
+        <p class="section__intro">Ich passe Inhalte, Dauer und Format gern euren Bedürfnissen an.</p>
         <div class="grid cards">
           <article class="card">
             <h3>Kinder Yoga</h3>
-            <p>
-              Spielerisch, kreativ und kindgerecht – mit Bewegung, Atemübungen und kleinen Entspannungsreisen.
-              Ideal für Kita, Schule, Vereine und privat.
-            </p>
+            <p>Spielerisch, kreativ und kindgerecht – mit Bewegung, Atemübungen und Entspannungsreisen.</p>
             <ul class="bullets">
-              <li>Alter: ab ca. 4 Jahren</li>
-              <li>Fokus: Körpergefühl, Emotionen, Konzentration</li>
-              <li>Format: Kurs / Workshop / Projekttag</li>
+              <li>Ab ca. 4 Jahren</li>
+              <li>Konzentration, Emotionen, Körpergefühl</li>
+              <li>In Kita / Schule / privat</li>
             </ul>
           </article>
-
           <article class="card">
             <h3>Familien Yoga</h3>
-            <p>
-              Gemeinsame Zeit, Leichtigkeit und Verbindung – mit einfachen Übungen, die allen Spaß machen.
-            </p>
+            <p>Gemeinsame Zeit, Leichtigkeit und Verbindung – für Eltern + Kinder.</p>
             <ul class="bullets">
-              <li>Für Eltern + Kinder</li>
-              <li>Rituale & kleine Achtsamkeitsmomente</li>
-              <li>Perfekt am Wochenende oder als Event</li>
+              <li>Rituale & Achtsamkeit</li>
+              <li>Wochenenden oder als Event</li>
             </ul>
           </article>
-
           <article class="card">
             <h3>Erwachsenen Yoga</h3>
-            <p>
-              Ruhiger Ausgleich zum Alltag – Mobilität, Kraft, Atem und Entspannung. Auch als Präventions-Format möglich.
-            </p>
+            <p>Ruhiger Ausgleich zum Alltag – Mobilität, Atem, Meditation.</p>
             <ul class="bullets">
-              <li>Sanft bis aktiv – nach Wunsch</li>
-              <li>Atem, Meditation, Stressreduktion</li>
+              <li>Sanft bis aktiv</li>
               <li>Einzel / Gruppe / Firmen</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
-
-    <!-- Über mich -->
+    <!-- Über mich (FINAL VERSION) -->
     <section id="ueber-mich" class="section">
       <div class="container">
         <h2>Über mich</h2>
         <div class="split">
+          <!-- Text -->
           <div class="panel">
             <p>
-              Ich bin <strong>Fariba Abdollahi</strong> und begleite Kinder, Familien und Erwachsene mit Yoga,
-              Meditation und Achtsamkeit. Mein Ziel: mehr Ruhe, Selbstvertrauen und Wohlbefinden – ganz ohne Druck,
-              dafür mit Freude und Herz.
+              Ich bin <strong>Fariba Abdollahi</strong>, zertifizierte Yoga- und Meditationslehrerin 
+              (RYT 200 & 100h Meditation). Ich begleite Kinder, Familien und Erwachsene mit Herz, 
+              Wissenschaft und Leichtigkeit.
             </p>
             <p>
-              Ich arbeite in Greven (Münsterland) und komme auch gern zu euch (Kita/Schule/Institution/privat).
+              Der Name <strong>Nilai</strong> bedeutet Wert – denn jedes Kind trägt einen wertvollen Kern 
+              in sich. Mein Ziel ist es, diesen inneren Wert zu stärken und Kindern Werkzeuge zu geben, 
+              die ihnen ein Leben lang helfen.
             </p>
-          </div>
-
-          <div class="panel panel--accent">
-            <h3>Was mir wichtig ist</h3>
+            <h3>Wissenschaftlicher Ansatz</h3>
+            <p>
+              Durch internationale Ausbildungen verbinde ich traditionelle Yogapraxis mit moderner 
+              Neurobiologie. Ich zeige Kindern, wie Atmung, Bewegung und Achtsamkeit das Nervensystem 
+              beruhigen und emotionale Stärke fördern.
+            </p>
             <ul class="checklist">
-              <li>Kindgerechte Sprache & spielerische Übungen</li>
-              <li>Sicherer Raum: wertschätzend & achtsam</li>
-              <li>Alltagstaugliche Tools für zu Hause</li>
+              <li>Resilienz gegenüber Stress</li>
+              <li>Mehr Konzentration</li>
+              <li>Gesundes Selbstwertgefühl</li>
             </ul>
+            <h3>Qualifikationen</h3>
+            <ul class="checklist">
+              <li>Yoga Alliance RYS 200</li>
+              <li>Meditation Teacher Training (100h)</li>
+              <li>Schwerpunkt: Neuro-Achtsamkeit für Kinder</li>
+            </ul>
+          </div>
+          <!-- Right side: Certificates + Photo -->
+          <div class="panel panel--accent">
+            <h3>Meine Ausbildungen</h3>
+            <div class="portrait-box">
+              <img src="bilder/meditation-cert.webp"
+                   alt="Zertifikat Meditation Teacher Training"
+                   class="portrait-img">
+            </div>
+            <div class="portrait-box">
+              <img src="bilder/yoga-rys200-cert.webp"
+                   alt="Yoga Alliance RYS 200 Zertifikat"
+                   class="portrait-img">
+            </div>
+            <h3>Ein Blick in meine Praxis</h3>
+            <div class="portrait-box">
+              <img src="bilder/personal.webp"
+                   alt="Yoga-Portrait im Freien"
+                   class="portrait-img">
+            </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Ablauf -->
     <section id="ablauf" class="section">
       <div class="container">
         <h2>Ablauf</h2>
         <div class="grid steps">
-          <div class="step">
-            <div class="step__no">1</div>
-            <h3>Anfrage</h3>
-            <p>Schreib kurz: für wen, Ort/Zeitraum und eure Wünsche.</p>
-          </div>
-          <div class="step">
-            <div class="step__no">2</div>
-            <h3>Rückmeldung</h3>
-            <p>Ich melde mich per E-Mail mit Vorschlägen & Fragen zurück.</p>
-          </div>
-          <div class="step">
-            <div class="step__no">3</div>
-            <h3>Termin</h3>
-            <p>Wir legen Umfang, Format und Termin fest – flexibel und passend.</p>
-          </div>
+          <div class="step"><div class="step__no">1</div><h3>Anfrage</h3><p>Kurz schreiben: für wen & wo.</p></div>
+          <div class="step"><div class="step__no">2</div><h3>Rückmeldung</h3><p>Schnelle Antwort per E-Mail.</p></div>
+          <div class="step"><div class="step__no">3</div><h3>Termin</h3><p>Format + Datum festlegen.</p></div>
         </div>
       </div>
     </section>
-
     <!-- Kontakt -->
     <section id="kontakt" class="section">
       <div class="container">
@@ -194,44 +201,30 @@
           <div class="contact__left">
             <h2>Kontakt</h2>
             <p class="section__intro">
-              Schreib mir kurz, für wen das Angebot ist (Kinder/Familie/Erwachsene), Ort/Zeitraum und deine Wünsche –
-              ich melde mich zeitnah zurück.
+              Schreib mir kurz, für wen das Angebot ist und welche Wünsche ihr habt.
             </p>
-
             <div class="info-box">
               <div><strong>E-Mail:</strong> <a href="mailto:info@nilai-yoga.de">info@nilai-yoga.de</a></div>
               <div><strong>Ort:</strong> Greven (Münsterland)</div>
             </div>
-
             <p class="small">
-              Mit Absenden des Formulars erklärst du dich mit der Verarbeitung deiner Daten gemäß
-              <a href="datenschutz.html">Datenschutzerklärung</a> einverstanden.
+              Mit Absenden des Formulars akzeptierst du die 
+              <a href="datenschutz.html">Datenschutzerklärung</a>.
             </p>
           </div>
-
           <div class="contact__right">
             <div class="form-card">
               <h3>Nachricht senden</h3>
-
-             
               <form id="contact-form"
                     action="https://formspree.io/f/mreaqyqj"
                     method="POST"
                     novalidate>
-                <label>
-                  <span>Name</span>
-                  <input name="name" type="text" autocomplete="name" required />
-                </label>
-
-                <label>
-                  <span>E-Mail</span>
-                  <input name="email" type="email" autocomplete="email" required />
-                </label>
-
+                <label><span>Name</span><input name="name" required></label>
+                <label><span>E-Mail</span><input name="email" type="email" required></label>
                 <label>
                   <span>Thema</span>
                   <select name="thema" required>
-                    <option value="" disabled selected>Bitte wählen…</option>
+                    <option disabled selected>Bitte wählen…</option>
                     <option>Kinder Yoga</option>
                     <option>Familien Yoga</option>
                     <option>Erwachsenen Yoga</option>
@@ -239,21 +232,10 @@
                     <option>Sonstiges</option>
                   </select>
                 </label>
-
-                <label>
-                  <span>Nachricht</span>
-                  <textarea name="message" rows="5" required></textarea>
-                </label>
-
-                <!-- Honeypot (ضد اسپم) -->
-                <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
-
-                <button class="btn btn--full" type="submit">Absenden</button>
-
-                <!-- پیام موفقیت/خطا همینجا نمایش داده میشه -->
+                <label><span>Nachricht</span><textarea name="message" rows="5" required></textarea></label>
+                <input type="text" name="_gotcha" class="hp" autocomplete="off">
+                <button class="btn btn--full">Absenden</button>
                 <div id="form-status" class="form-status" aria-live="polite"></div>
-
-                <p class="small small--muted">Ich melde mich per E-Mail zurück.</p>
               </form>
             </div>
           </div>
@@ -261,60 +243,44 @@
       </div>
     </section>
   </main>
-
-  <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__left">
         <div class="footer__brand">Nilai Yoga</div>
         <div class="footer__meta">© <span id="year"></span> Nilai Yoga – Greven (Münsterland)</div>
       </div>
-
       <div class="footer__right">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
       </div>
     </div>
   </footer>
-
   <script>
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Prevent redirect to Formspree thanks page + show inline message
     (function () {
       const form = document.getElementById('contact-form');
       const statusEl = document.getElementById('form-status');
-      if (!form || !statusEl) return;
-
+      if (!form) return;
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-
-        statusEl.className = 'form-status';
         statusEl.textContent = 'Senden…';
-
         try {
           const res = await fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
             headers: { 'Accept': 'application/json' }
           });
-
           if (res.ok) {
-            statusEl.textContent = '✅ Vielen Dank! Deine Nachricht wurde erfolgreich übermittelt.';
-            statusEl.classList.add('success');
+            statusEl.textContent = 'Vielen Dank! Nachricht erfolgreich übermittelt.';
             form.reset();
           } else {
-            statusEl.textContent = '❌ Leider hat das Senden nicht geklappt. Bitte versuche es erneut.';
-            statusEl.classList.add('error');
+            statusEl.textContent = 'Fehler – bitte später erneut versuchen.';
           }
-        } catch (err) {
-          statusEl.textContent = '❌ Verbindungsfehler. Bitte prüfe dein Internet und versuche es erneut.';
-          statusEl.classList.add('error');
+        } catch {
+          statusEl.textContent = 'Verbindungsfehler.';
         }
       });
     })();
   </script>
 </body>
 </html>
-
