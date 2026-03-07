@@ -285,35 +285,46 @@ Yoga, Meditation und Achtsamkeit für Kinder, Familien und Erwachsene.
       </div>
     </div>
   </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    (function () {
-      const form = document.getElementById('contact-form');
-      const statusEl = document.getElementById('form-status');
-      if (!form) return;
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        statusEl.textContent = 'Senden…';
-        try {
-          const res = await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-          });
-          if (res.ok) {
-            statusEl.textContent = 'Vielen Dank! Nachricht erfolgreich übermittelt.';
-            form.reset();
-          } else {
-            statusEl.textContent = 'Fehler – bitte später erneut versuchen.';
-          }
-        } catch {
-          statusEl.textContent = 'Verbindungsfehler.';
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  (function () {
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('form-status');
+    if (!form || !statusEl) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      statusEl.className = 'form-status';
+      statusEl.textContent = 'Senden…';
+      statusEl.style.display = 'block';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          statusEl.className = 'form-status success';
+          statusEl.textContent = 'Vielen Dank! Nachricht erfolgreich übermittelt.';
+          form.reset();
+        } else {
+          statusEl.className = 'form-status error';
+          statusEl.textContent = 'Fehler – bitte später erneut versuchen.';
         }
-      });
-    })();
-  </script>
+      } catch {
+        statusEl.className = 'form-status error';
+        statusEl.textContent = 'Verbindungsfehler.';
+      }
+    });
+  })();
+</script>
 </body>
 </html>
+
 
 
 
