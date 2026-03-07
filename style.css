@@ -414,13 +414,12 @@ input:focus, select:focus, textarea:focus{
     flex-direction:column;
   }
 }
-.hero h1 .hero-subtitle{
+.hero-title span{
   display:block;
   font-size:22px;
   font-weight:400;
   margin-top:6px;
   color: var(--muted);
-  line-height:1.3;
 }
 
 
