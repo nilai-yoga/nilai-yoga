@@ -417,17 +417,21 @@ input:focus, select:focus, textarea:focus{
 .hero-title{
   white-space: nowrap;
   font-size: clamp(26px, 3vw, 42px);
-  line-height:1.1;
+  line-height: 1.1;
+  margin: 0;
+  flex: 0 0 auto;
+  min-width: max-content;
 }
 
 .hero-subtitle{
-  display:block;
+  display: block;
   white-space: normal;
-  font-size:22px;
-  font-weight:400;
-  margin-top:6px;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 6px;
   color: var(--muted);
-   }
+}
+
 
 
 
