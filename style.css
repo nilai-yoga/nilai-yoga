@@ -65,7 +65,7 @@ body{
   align-items:center;
   justify-content:space-between;
   padding: 14px 0;
-  gap: 16px;
+  gap: 24px;
 }
 .brand__name{
   font-weight: 800;
@@ -80,7 +80,8 @@ body{
   display:flex;
   gap: 18px;
   align-items:center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 .nav a{
   color: var(--text);
@@ -432,6 +433,7 @@ input:focus, select:focus, textarea:focus{
   margin-top: 6px;
   color: var(--muted);
 }
+
 
 
 
