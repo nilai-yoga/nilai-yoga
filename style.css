@@ -416,6 +416,8 @@ input:focus, select:focus, textarea:focus{
 }
 .hero-title{
   white-space: nowrap;
+  font-size: clamp(26px, 3vw, 42px);
+  line-height:1.1;
 }
 
 .hero-subtitle{
@@ -426,6 +428,7 @@ input:focus, select:focus, textarea:focus{
   margin-top:6px;
   color: var(--muted);
    }
+
 
 
 
