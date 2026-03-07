@@ -414,12 +414,18 @@ input:focus, select:focus, textarea:focus{
     flex-direction:column;
   }
 }
-.hero-title span{
+.hero-title{
+  white-space: nowrap;
+}
+
+.hero-subtitle{
   display:block;
+  white-space: normal;
   font-size:22px;
   font-weight:400;
   margin-top:6px;
   color: var(--muted);
-}
+   }
+
 
 
