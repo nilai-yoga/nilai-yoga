@@ -143,6 +143,7 @@ body{
 /* Sections */
 .section{
   padding: 34px 0;
+    scroll-margin-top: 120px;
 }
 .section h2{
   margin: 0 0 10px;
@@ -413,3 +414,4 @@ input:focus, select:focus, textarea:focus{
     flex-direction:column;
   }
 }
+
