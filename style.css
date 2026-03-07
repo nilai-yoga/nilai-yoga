@@ -415,6 +415,7 @@ input:focus, select:focus, textarea:focus{
   }
 }
 .hero-title{
+  display: inline-block;
   white-space: nowrap;
   font-size: clamp(26px, 3vw, 42px);
   line-height: 1.1;
