@@ -621,7 +621,10 @@ input:focus, select:focus, textarea:focus{
     margin: 0 8px;
   }
 }
-
+.logo{
+  height:70px;
+  width:auto;
+}
 
 
 
