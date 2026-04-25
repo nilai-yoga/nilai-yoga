@@ -3,13 +3,83 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Anmeldung | Nilai Yoga</title>
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-<h1>Anmeldung</h1>
-<p>Hier kommt bald das Formular.</p>
+<div class="container" style="padding:60px 0; max-width:700px;">
+
+<h1 style="margin-bottom:10px;">Yoga Anmeldung</h1>
+<p style="margin-bottom:30px;">
+Bitte füllen Sie das Formular aus. Ich melde mich schnellstmöglich zurück.
+</p>
+
+<div class="form-card">
+
+<form action="https://formspree.io/f/mreaqyqj" method="POST">
+
+<label>
+<span>Vorname</span>
+<input type="text" name="vorname" required>
+</label>
+
+<label>
+<span>Nachname</span>
+<input type="text" name="nachname" required>
+</label>
+
+<label>
+<span>Alter</span>
+<input type="number" name="alter" min="1" max="120" required>
+</label>
+
+<label>
+<span>E-Mail</span>
+<input type="email" name="email" required>
+</label>
+
+<label>
+<span>Telefon</span>
+<input type="tel" name="telefon">
+</label>
+
+<label>
+<span>Kursart</span>
+<select name="kursart" required>
+<option disabled selected>Bitte wählen…</option>
+<option>Kinder Yoga</option>
+<option>Familien Yoga</option>
+<option>Erwachsenen Yoga</option>
+<option>Workshop / Kita / Schule</option>
+</select>
+</label>
+
+<label>
+<span>Wunschtermin</span>
+<input type="text" name="termin" placeholder="z.B. Montag 16 Uhr">
+</label>
+
+<label>
+<span>Nachricht</span>
+<textarea name="nachricht" rows="5"></textarea>
+</label>
+
+<button class="btn btn--full" type="submit">
+Jetzt anmelden
+</button>
+
+</form>
+
+</div>
+
+<p style="margin-top:20px;">
+<a href="index.html">← Zurück zur Startseite</a>
+</p>
+
+</div>
 
 </body>
 </html>
