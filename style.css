@@ -626,7 +626,24 @@ input:focus, select:focus, textarea:focus{
   width:auto;
 }
 
+.checkbox-label{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin:10px 0 18px;
+  font-size:0.94rem;
+  color:#33424d;
+}
 
+.checkbox-label input{
+  width:auto;
+  margin-top:5px;
+}
+
+.checkbox-label a{
+  color:#7d8f69;
+  text-decoration:underline;
+}
 
 
 
