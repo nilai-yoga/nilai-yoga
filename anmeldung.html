@@ -70,7 +70,7 @@ Bitte füllen Sie das Formular aus. Ich melde mich schnellstmöglich zurück.
 <button class="btn btn--full" type="submit">
 Jetzt anmelden
 </button>
-
+<div id="anmeldung-status" class="form-status" aria-live="polite"></div>
 </form>
 
 </div>
@@ -80,6 +80,41 @@ Jetzt anmelden
 </p>
 
 </div>
+<script>
+(function () {
+  const form = document.getElementById('anmeldung-form');
+  const statusEl = document.getElementById('anmeldung-status');
 
+  if (!form || !statusEl) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    statusEl.className = 'form-status';
+    statusEl.textContent = 'Senden…';
+    statusEl.style.display = 'block';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        statusEl.className = 'form-status success';
+        statusEl.textContent = 'Vielen Dank! Ihre Anmeldung wurde erfolgreich übermittelt.';
+        form.reset();
+      } else {
+        statusEl.className = 'form-status error';
+        statusEl.textContent = 'Fehler – bitte versuchen Sie es später erneut.';
+      }
+    } catch {
+      statusEl.className = 'form-status error';
+      statusEl.textContent = 'Verbindungsfehler. Bitte versuchen Sie es später erneut.';
+    }
+  });
+})();
+</script>
 </body>
 </html>
